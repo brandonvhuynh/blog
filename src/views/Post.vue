@@ -2,9 +2,9 @@
   <div class="post">
     <div v-if="loading">Loading...</div>
     <div v-else class="post__wrapper">
-      <PostContent :post="data.post" />
-      <PostComments :comments="data.comments" />
-      <PostAuthor :author="data.author" />
+      <PostContent v-if="data.post" :post="data.post" />
+      <PostComments v-if="data.comments" :comments="data.comments" />
+      <PostAuthor v-if="data.author" :author="data.author" />
     </div>
   </div>
 </template>
