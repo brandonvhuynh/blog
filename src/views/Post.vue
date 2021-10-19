@@ -2,9 +2,9 @@
   <div class="post">
     <div v-if="loading">Loading...</div>
     <div v-else class="post__wrapper">
-      <PostContent v-if="data.post" :post="data.post" />
-      <PostComments v-if="data.comments" :comments="data.comments" />
-      <PostAuthor v-if="data.author" :author="data.author" />
+      <post-content v-if="data.post" :post="data.post" />
+      <post-comments v-if="data.comments" :comments="data.comments" />
+      <post-author v-if="data.author" :author="data.author" />
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ import fetchBlogPost from "../utilities/fetchBlogPost";
 import fetchBlogPostAuthor from "../utilities/fetchBlogPostAuthor";
 import fetchBlogPostComments from "../utilities/fetchBlogPostComments";
 import PostAuthor from "../components/post/PostAuthor.vue";
-import PostComments from "../components/post/PostComments.vue";
+import PostComments from "../components/post/comments/PostComments.vue";
 import PostContent from "../components/post/PostContent.vue";
 
 export default {

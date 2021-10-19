@@ -24,7 +24,7 @@ export default {
     author: {
       type: Object,
       required: true
-    }
+    },
   },
   computed: {
     /**
@@ -34,7 +34,7 @@ export default {
      */
     outputAddressCityZip() {
       return `${this.author.address.city} ${this.author.address.zipcode}`;
-    }
-  }
+    },
+  },
 }
 </script>

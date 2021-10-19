@@ -5,7 +5,7 @@
       :key="post.id"
       class="col col-12 col-lg-3 my-2 mx-1"
     >
-      <BlogArchivePost :post="post" />
+      <blog-archive-post :post="post" />
     </li>
   </ul>
 </template>
@@ -33,7 +33,7 @@ export default {
      */
     const getPostsData = async () => {
       try {
-        posts.value = await fetchBlogPosts()
+        posts.value = await fetchBlogPosts();
       } catch (error) {
         console.error(error);
       }
@@ -47,6 +47,6 @@ export default {
     return {
       posts
     }
-  }
+  },
 }
 </script>

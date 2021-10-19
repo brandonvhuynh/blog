@@ -7,16 +7,19 @@
         :key="comment.id"
         class="post-comment"
       >
-        <h3>{{ comment.name }}</h3>
-        <p>{{ comment.body }}</p>
+        <post-comment :comment="comment" />
       </li>
     </ul>
   </div>
 </template>
 
 <script>
+import PostComment from './PostComment.vue'
 export default {
   name: "PostComments",
+  components: {
+    PostComment,
+  },
   props: {
     comments: {
       required: true,
